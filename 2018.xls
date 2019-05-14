@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <style type="text/css">
+        .GridHeaderStyle th
+        {
+            text-align: left;
+        }
+        
+        .GridContentStyle td
+        {
+            text-align: left;
+        }
+    </style>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Member Attendance Report
+</title><link id="pageCss" rel="Stylesheet" type="text/css" /></head>
+<body>
+    <form name="form1" method="post" action="./PrintMemberAttendance.aspx?from=01%2f01%2f2018&amp;to=12%2f31%2f2018&amp;includeSubMembers=False&amp;exportToExcel=true" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var hdnShowPrintClientId = 'ctrlPreviewHeader_hdnShowPrint';
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FEFE0256" />
+</div>
+        <div>
+            <table cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" width="100%">
+                <tr>
+                    <td>
+                        <input type="hidden" name="ctrlPreviewHeader$hdnShowPrint" id="ctrlPreviewHeader_hdnShowPrint" value="false" />
+<table cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td id="ctrlPreviewHeader_tdPrintDate" align="right">
+            <span id="ctrlPreviewHeader_lblPrintDate">05/10/2019</span>
+        </td>
+
+    </tr>
+    <tr>
+        <td id="ctrlPreviewHeader_tdPreviewHeading" align="center" class="Hd3Cell" style="width: 100%;">
+            <span id="ctrlPreviewHeader_lblPreviewHeading" style="display:inline-block;width:100%;">Member Attendance Report</span>
+        </td>
+
+    </tr>
+    <tr>
+        <td id="ctrlPreviewHeader_tdCompanyName" align="center">
+            <span id="ctrlPreviewHeader_lblCompanyName">DePaul University</span>
+        </td>
+
+    </tr>
+    <tr>
+        <td id="ctrlPreviewHeader_tdMember" align="center">
+            <span id="ctrlPreviewHeader_lblMember">TIMOTHY HOLMES (1504067)</span>
+        </td>
+
+    </tr>
+    <tr>
+        <td id="ctrlPreviewHeader_tdCriteria" align="center">
+            <span id="ctrlPreviewHeader_lblCriteria">From: 01/01/2018 To: 12/31/2018; Include Sub Members: No</span>
+        </td>
+
+    </tr>
+</table>
+<script language="javascript" type="text/javascript">
+<!--
+
+    var showPrint = document.getElementById("ctrlPreviewHeader_hdnShowPrint").value;
+    if (showPrint) {
+            window.print();
+}
+//-->
+</script>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <strong>
+                        <span id="olslbltotalVisit" class=" ClsInPlaceEditor" key="L_TOTAL_VISITS">Total Visits</span>:</strong>&nbsp;
+                        <span id="lblTotalVisit">96</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+	<table class="SmallTableBorder" cellspacing="0" cellpadding="2" rules="all" border="1" id="gvMemberList" style="width:100%;border-collapse:collapse;">
+		<tr class="DgHeader GridHeaderStyle">
+			<th scope="col">
+                                    <span id="gvMemberList_ctl01_olslblMember" class=" ClsInPlaceEditor" key="L_MEMBER">Member</span>
+                                </th><th scope="col">
+                                    <span id="gvMemberList_ctl01_olslblCheckinTime" class=" ClsInPlaceEditor" key="L_CHECKIN_TIME">Checkin Time</span>
+                                </th><th scope="col">
+                                    <span id="gvMemberList_ctl01_olslblSite" class=" ClsInPlaceEditor" key="L_SITE">Site</span>
+                                </th><th scope="col">
+                                    <span id="gvMemberList_ctl01_olslblLocation" class=" ClsInPlaceEditor" key="L_LOCATION">Location</span>
+                                </th><th scope="col">
+                                    <span id="gvMemberList_ctl01_olslblSwiped" class=" ClsInPlaceEditor" key="L_SWIPED">Swiped</span>
+                                </th>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl02_Label2">09/12/18 07:35 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl02_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl03_Label2">09/10/18 09:12 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl03_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl04_Label2">09/07/18 12:06 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl04_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl05_Label2">09/06/18 11:32 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl05_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl06_Label2">09/05/18 03:49 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl06_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl07_Label2">08/27/18 11:34 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl07_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl08_Label2">08/10/18 07:40 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl08_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl09_Label2">08/09/18 07:37 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl09_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl10_Label2">08/08/18 08:30 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl10_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl11_Label2">08/06/18 01:38 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl11_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl12_Label2">08/03/18 06:58 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl12_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl13_Label2">08/02/18 07:48 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl13_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl14_Label2">08/01/18 07:46 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl14_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl15_Label2">07/31/18 07:44 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl15_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl16_Label2">07/30/18 07:57 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl16_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl17_Label2">07/27/18 07:36 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl17_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl18_Label2">07/26/18 07:01 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl18_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl19_Label2">07/25/18 06:51 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl19_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl20_Label2">07/24/18 06:49 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl20_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl21_Label2">07/23/18 07:09 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl21_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl22_Label2">07/20/18 07:00 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl22_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl23_Label2">07/19/18 07:09 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl23_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl24_Label2">07/18/18 07:42 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl24_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl25_Label2">07/17/18 07:28 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl25_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl26_Label2">07/16/18 07:47 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl26_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl27_Label2">07/13/18 07:36 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl27_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl28_Label2">07/11/18 07:47 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl28_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl29_Label2">07/10/18 07:52 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl29_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl30_Label2">07/09/18 07:42 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl30_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl31_Label2">07/06/18 02:29 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl31_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl32_Label2">07/05/18 08:46 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl32_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl33_Label2">07/03/18 07:00 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl33_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl34_Label2">07/02/18 07:18 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl34_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl35_Label2">06/29/18 07:17 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl35_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl36_Label2">06/27/18 07:17 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl36_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl37_Label2">06/26/18 07:47 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl37_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl38_Label2">06/25/18 08:24 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl38_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl39_Label2">06/22/18 07:56 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl39_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl40_Label2">06/21/18 07:25 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl40_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl41_Label2">06/20/18 07:18 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl41_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl42_Label2">06/19/18 08:14 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl42_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl43_Label2">06/18/18 08:48 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl43_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl44_Label2">06/11/18 10:59 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl44_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl45_Label2">06/07/18 09:07 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl45_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl46_Label2">06/05/18 02:06 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl46_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl47_Label2">06/01/18 12:39 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl47_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl48_Label2">05/31/18 07:36 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl48_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl49_Label2">05/30/18 07:34 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl49_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl50_Label2">05/29/18 07:42 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl50_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl51_Label2">05/25/18 08:08 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl51_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl52_Label2">05/24/18 07:57 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl52_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl53_Label2">05/23/18 07:39 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl53_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl54_Label2">05/22/18 07:14 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl54_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl55_Label2">05/17/18 08:00 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl55_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl56_Label2">05/16/18 08:07 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl56_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl57_Label2">05/15/18 07:49 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl57_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl58_Label2">05/11/18 01:18 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl58_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl59_Label2">05/10/18 07:43 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl59_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl60_Label2">05/09/18 07:38 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl60_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl61_Label2">05/08/18 07:56 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl61_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl62_Label2">05/07/18 07:54 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl62_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl63_Label2">05/04/18 02:05 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl63_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl64_Label2">05/03/18 07:56 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl64_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl65_Label2">05/02/18 08:54 AM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl65_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl66_Label2">05/01/18 02:23 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl66_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl67_Label2">04/27/18 12:06 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl67_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl68_Label2">04/26/18 02:34 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl68_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl69_Label2">04/25/18 05:57 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl69_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl70_Label2">04/24/18 02:30 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl70_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl71_Label2">04/20/18 01:30 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl71_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl72_Label2">04/19/18 02:33 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl72_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl73_Label2">04/18/18 05:50 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl73_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl74_Label2">04/17/18 02:32 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl74_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl75_Label2">04/12/18 02:54 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl75_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl76_Label2">04/11/18 05:48 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl76_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl77_Label2">04/10/18 02:51 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl77_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl78_Label2">04/06/18 01:31 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl78_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl79_Label2">04/05/18 02:45 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl79_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl80_Label2">04/04/18 05:58 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl80_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl81_Label2">04/03/18 02:29 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl81_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl82_Label2">03/28/18 06:01 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl82_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl83_Label2">03/27/18 02:20 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl83_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl84_Label2">03/22/18 02:53 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl84_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl85_Label2">03/19/18 12:49 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl85_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl86_Label2">03/01/18 05:47 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl86_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl87_Label2">02/28/18 01:02 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl87_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl88_Label2">02/20/18 07:12 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl88_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl89_Label2">01/30/18 05:23 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl89_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl90_Label2">01/25/18 05:59 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl90_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl91_Label2">01/24/18 04:34 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl91_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl92_Label2">01/23/18 06:02 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl92_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl93_Label2">01/17/18 03:02 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl93_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl94_Label2">01/10/18 03:39 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl94_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl95_Label2">01/09/18 06:00 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl95_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgText">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl96_Label2">01/05/18 03:25 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl96_Label1">Yes</span>
+                                    </td>
+		</tr><tr class="DgTextAlt">
+			<td>
+                                    TIMOTHY HOLMES
+                                </td><td>
+                                        <span id="gvMemberList_ctl97_Label2">01/03/18 02:25 PM</span>
+                                    </td><td>
+                                    Ray Meyer Fit and Rec Center
+                                </td><td>
+                                    membership
+                                </td><td>
+                                        <span id="gvMemberList_ctl97_Label1">Yes</span>
+                                    </td>
+		</tr>
+	</table>
+</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
