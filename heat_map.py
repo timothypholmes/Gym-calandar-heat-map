@@ -144,6 +144,8 @@ def gym_heatmap():
     data = data.reindex(dates, fill_value=0)
     #print(data.head(5))
     #data = pd.Series(data["Date_Time"])
+
+    
     print(data)
     s = pd.Series({'01-02-2015': 2,
                '01-03-2015': 10,
