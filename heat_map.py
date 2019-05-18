@@ -137,7 +137,7 @@ def gym_heatmap():
     dates = pd.date_range(start='2015-01-01', end='2018-09-30')
     data = pd.read_csv('~/Desktop/Gym-calandar-heat-map/all_data.csv')
     #data["Date_Time"] = data["Date"].map(str) + " " + data["Time_Numerical"].map(str)
-    data = dict(zip(data['Date'], data['Time_Numerical']))
+    data = (zip(data['Date'], data['Time_Numerical']))
     data = pd.Series(data)
     data = pd.to_datetime(data)
     #data = data.set_index(data)
