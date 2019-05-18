@@ -137,24 +137,16 @@ def gym_heatmap():
     dates = pd.date_range(start='2015-01-01', end='2018-09-30')
     data = pd.read_csv('~/Desktop/Gym-calandar-heat-map/all_data.csv')
     #data["Date_Time"] = data["Date"].map(str) + " " + data["Time_Numerical"].map(str)
-    data = (zip(data['Date'], data['Time_Numerical']))
+    data = dict(zip(data['Date'], data['Time_Numerical']))
+    print(data)
     data = pd.Series(data)
-    data = pd.to_datetime(data)
+    data.index = pd.DatetimeIndex(data.index)
+    #data = pd.to_datetime(data)
     #data = data.set_index(data)
     data = data.reindex(dates, fill_value=0)
     #print(data.head(5))
     #data = pd.Series(data["Date_Time"])
 
-    
-    print(data)
-    s = pd.Series({'01-02-2015': 2,
-               '01-03-2015': 10,
-               '01-06-2015': 5,
-               '01-07-2015': 1})
-    s.index = pd.DatetimeIndex(s.index)
-
-    s = s.reindex(dates, fill_value=0)
-    print(s)
     #data.index = pd.DatetimeIndex(data, start='2015-01-01', end='2018-09-30')
 
     # Create the figure. For the aspect ratio, one year is 7 days by 53 weeks.
