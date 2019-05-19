@@ -37,7 +37,6 @@ def date_heatmap(series, start=None, end=None, mean=False, ax=None, **kwargs):
             The axes on which the heatmap was drawn. This is set as the current
             axes in the `~matplotlib.pyplot` API.
     '''
-    # Combine values occurring on the same day.
     dates = series.index.floor('D')
     group = series.groupby(dates)
     series = group.mean() if mean else group.sum()
@@ -53,12 +52,13 @@ def date_heatmap(series, start=None, end=None, mean=False, ax=None, **kwargs):
     # Pandas and numpy day-of-week conventions are Monday=0 and Sunday=6.
     start_sun = start - np.timedelta64((start.dayofweek + 1) % 7, 'D')
     end_sun = end + np.timedelta64(7 - end.dayofweek - 1, 'D')
+    start_year = start - np.timedelta64((start.dayofyear))
+    end_year = end + np.timedelta64(end.dayofyear)
 
     # Create the heatmap and track ticks.
     num_weeks = (end_sun - start_sun).days // 7
     heatmap = np.zeros((7, num_weeks))
     ticks = {}  # week number -> month name
-    #for years in range(number_years):
     for week in range(num_weeks):
         for day in range(7):
             date = start_sun + np.timedelta64(7 * week + day, 'D')
@@ -72,7 +72,6 @@ def date_heatmap(series, start=None, end=None, mean=False, ax=None, **kwargs):
     # Get the coordinates, offset by 0.5 to align the ticks.
     y = np.arange(8) - 0.5
     x = np.arange(num_weeks + 1) - 0.5
-    #z = np.arrange(num_years)
 
     # Plot the heatmap. Prefer pcolormesh over imshow so that the figure can be
     # vectorized when saved to a compatible format. We must invert the axis for
@@ -134,7 +133,7 @@ def date_heatmap_demo():
 
 def gym_heatmap():
     # Get some data, a series of values with datetime index.
-    dates = pd.date_range(start='2015-01-01', end='2018-09-30')
+    dates = pd.date_range(start='2015-01-01', end='2018-12-31')
     data = pd.read_csv('~/Desktop/Gym-calandar-heat-map/all_data.csv')
     #data["Date_Time"] = data["Date"].map(str) + " " + data["Time_Numerical"].map(str)
     data = dict(zip(data['Date'], data['Time_Numerical']))
@@ -143,7 +142,7 @@ def gym_heatmap():
     data.index = pd.DatetimeIndex(data.index)
     #data = pd.to_datetime(data)
     #data = data.set_index(data)
-    data = data.reindex(dates, fill_value=0)
+    data = data.reindex(dates, fill_value=-100)
     #print(data.head(5))
     #data = pd.Series(data["Date_Time"])
 
@@ -151,7 +150,7 @@ def gym_heatmap():
 
     # Create the figure. For the aspect ratio, one year is 7 days by 53 weeks.
     # We widen it further to account for the tick labels and color bar.
-    figsize = plt.figaspect(7 / 56*2)
+    figsize = plt.figaspect(7 / 56*3)
     fig = plt.figure(figsize=figsize)
 
     # Plot the heatmap with a color bar.
@@ -160,14 +159,14 @@ def gym_heatmap():
 
     # Use a discrete color map with 5 colors (the data ranges from 0 to 4).
     # Extending the color limits by 0.5 aligns the ticks in the color bar.
-    cmap = mpl.cm.get_cmap('twilight_shifted', 100)
+    cmap = mpl.cm.get_cmap('cividis', 100)
     plt.set_cmap(cmap)
     plt.clim(0.30, 0.95)
 
     # Force the cells to be square. If this is set, the size of the color bar
     # may look weird compared to the size of the heatmap. That can be corrected
     # by the aspect ratio of the figure or scale of the color bar.
-    ax.set_aspect('equal')
+    #ax.set_aspect('equal')
 
     # Save to a file. For embedding in a LaTeX doc, consider the PGF backend.
     # http://sbillaudelle.de/2015/02/23/seamlessly-embedding-matplotlib-output-into-latex.html
