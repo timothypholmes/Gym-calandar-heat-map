@@ -75,6 +75,21 @@ def calendar_heatmap(series, start=None, end=None, mean=False, ax=None, **kwargs
     ax.set_yticks(np.arange(7))
     ax.set_yticklabels(days)
 
+    ax.text(1.15, 0, '00:00',
+        verticalalignment='bottom', horizontalalignment='right',
+        transform=ax.transAxes,
+        color='black', fontsize=15)
+
+    ax.text(1.15, 0.5, '12:00',
+        verticalalignment='bottom', horizontalalignment='right',
+        transform=ax.transAxes,
+        color='black', fontsize=15)
+
+    ax.text(1.15, 0.95, '24:00',
+        verticalalignment='bottom', horizontalalignment='right',
+        transform=ax.transAxes,
+        color='black', fontsize=15)
+
     plt.sca(ax)
     plt.sci(mesh)
 
@@ -95,11 +110,11 @@ def gym_heatmap():
     ax = calendar_heatmap(data, edgecolor='black')
     plt.colorbar(ticks=range(100), pad=0.02)
 
-    cmap = mpl.cm.get_cmap('cividis', 100)
+    cmap = mpl.cm.get_cmap('twilight_shifted', 100)
     plt.set_cmap(cmap)
     plt.clim(0.1, .99)
 
-    fig.savefig('heatmap.png', bbox_inches='tight')
+    fig.savefig('heatmap.pdf', bbox_inches='tight')
     plt.show(fig)
 
 
